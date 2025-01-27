@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lost Persons | Find The Missing</title>
+    <title>Found Persons | Find The Missing</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -36,38 +36,39 @@
         <div class="max-w-container mx-auto px-5 w-full">
             <div class="flex justify-between items-center">
                 <div class="flex gap-[50px]">
-                    <a href="index.html" class="text-primary hover:opacity-80">Home</a>
-                    <a href="lost_person_logged_out.html" class="text-primary hover:opacity-80">Lost Persons</a>
-                    <a href="found_persons_logged_out.html" class="text-primary hover:opacity-80">Found Persons</a>
+                    <a href="lost_persons_logged_in.html" class="text-primary hover:opacity-80">Lost Persons</a>
+                    <a href="found_persons_logged_in.html" class="text-primary hover:opacity-80">Found Persons</a>
                 </div>
-                <div class="flex gap-[30px]">
-                    <a href="sign_up.html" class="px-5 py-2 rounded-lg border border-accent bg-accent/50 text-white">Sign up</a>
-                    <a href="login.html" class="px-5 py-2 rounded-lg border border-accent bg-accent text-white">Log in</a>
+                <div class="flex items-center gap-4">
+                    <a href="user_profile.html" class="text-primary hover:opacity-80">
+                        <img src="./images/avatar.png" alt="User Avatar" class="w-10 h-10 rounded-full">
+                    </a>
+                    <a href="index.html" class="bg-accent text-white py-2 px-4 rounded-lg">Log Out</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="lost-hero-section bg-cover bg-center" style="background-image: url('./images/forest.png');">
+    <section class="lost-hero-section bg-cover bg-center" style="background-image: url('./images/hold.png');">
         <div class="max-w-container mx-auto px-5 pt-16 pb-32">
             <div class="glass">
-                <h1 class="text-5xl font-bold mb-6 text-primary">Lost Persons</h1>
-                <p class="text-lg text-black">These are people who have been reported lost and no one has reported<br> them found in our database.</p>
+                <h1 class="text-5xl font-bold mb-6 text-primary">Found Persons</h1>
+                <p class="text-lg text-black">These are people who have been reported found but no one has reported<br> them lost in our database.</p><br>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
     <section class="lost-cta-section text-center py-16">
-        <p class="cta-text">Has a close person gone missing? Please report to the nearest police station and also file a report with us below so we can help find them.</p><br>
-        <a href="#" class="lost-check-button bg-accent text-white py-3 px-6 rounded-lg block text-center mx-auto max-w-md">Check if they have been found using facial recognition</a>
+        <p class="cta-text">Have you found someone you believe is lost? Please report to the nearest police station and also file a report with us below so we can help find them.</p><br>
+        <a href="login.html" class="lost-check-button bg-accent text-white py-3 px-6 rounded-lg block text-center mx-auto max-w-md">Check their face using facial recognition</a>
     </section>
 
-    <!-- Lost Person Cards Section -->
+    <!-- Found Person Cards Section -->
     <section class="lost-person-section py-16">
         <div class="max-w-container mx-auto px-5 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Lost Person Card -->
+            <!-- Found Person Card -->
             <div class="lost-person-card bg-white rounded-lg shadow-lg p-6 flex">
                 <div class="lost-person-image flex-shrink-0">
                     <img src="./images/avatar.png" alt="Baraka Mvule Mwai" class="w-32 h-32 rounded-full object-cover">
@@ -100,13 +101,12 @@
                     </div>
                     <div class="lost-detail-item">
                         <span class="icon">📅</span>
-                        <span class="label">Date Reported Lost:</span>
+                        <span class="label">Date Found:</span>
                         <span class="value">3/11/2024</span>
                     </div>
                 </div>
             </div>
-
-            <!-- Second Lost Person Card -->
+            <!-- Second Found Person Card -->
             <div class="lost-person-card bg-white rounded-lg shadow-lg p-6 flex">
                 <div class="lost-person-image flex-shrink-0">
                     <img src="./images/avatar.png" alt="Annelisa Njeri Kamau" class="w-32 h-32 rounded-full object-cover">
@@ -139,31 +139,12 @@
                     </div>
                     <div class="lost-detail-item">
                         <span class="icon">📅</span>
-                        <span class="label">Date Reported Lost:</span>
+                        <span class="label">Date Found:</span>
                         <span class="value">3/11/2024</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="bg-[#000B1C] text-white py-16">
-        <div class="max-w-container mx-auto px-5">
-            <div class="grid grid-cols-3 gap-8">
-                <div class="space-y-4">
-                    <a href="index.html" class="block hover:text-accent">Home</a>
-                    <a href="sign_up.html" class="block hover:text-accent">Sign Up</a>
-                </div>
-                <div class="space-y-4 text-center">
-                    <a href="lost_person_logged_out.html" class="block hover:text-accent">Lost Persons</a>
-                </div>
-                <div class="space-y-4 text-right">
-                    <a href="found_persons_logged_out.html" class="block hover:text-accent">Found Persons</a>
-                    <a href="login.html" class="block hover:text-accent">Log in</a>
-                </div>
-            </div>
-        </div>
-    </footer>
 </body>
-</html>
+</html> 
