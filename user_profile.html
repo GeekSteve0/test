@@ -27,10 +27,9 @@
             margin: 0; /* Remove default margin */
             font-family: Arial, sans-serif; /* Font style */
         }
-        .hero-section { 
-            background-image: url('./images/forest1.png'); /* Hero image */
+        .hero-section {
+            background-image: url('./images/forest.png'); /* Hero image */
             background-size: cover;
-            background-color: cyan;
             background-position: center;
             height: 300px; /* Adjust height as needed */
             display: flex;
@@ -47,6 +46,19 @@
             bottom: -75px; /* Overlap the hero section */
             left: 50%; /* Center the image */
             transform: translateX(-50%); /* Adjust for centering */
+            z-index: 1; /* Ensure the image is above the hero section */
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            width: 180px; /* Increased size for better visibility */
+            height: 180px; /* Increased size for better visibility */
+            border-radius: 50%;
+            background-color: #DEF6FB; /* Match the body background */
+            bottom: -90px; /* Adjusted to align with the profile image */
+            left: 50%; /* Center the cut-out */
+            transform: translateX(-50%); /* Adjust for centering */
+            z-index: 0; /* Behind the profile image */
         }
         .profile-container {
             text-align: center;
@@ -104,9 +116,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <div class="hero-section">
-        <img src="./images/avatar.png" alt="User Avatar" class="profile-image">
-    </div>
+    <div class="hero-section"></div>
 
     <!-- User Profile Section -->
     <div class="profile-container">
