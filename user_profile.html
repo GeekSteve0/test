@@ -12,7 +12,7 @@
                     colors: {
                         primary: '#784FB1',
                         accent: '#FC7F15',
-                        grey: '#F0F0F0', // Added grey color for background
+                        grey: '#F0F0F0',
                     },
                     maxWidth: {
                         'container': '1296px'
@@ -23,19 +23,35 @@
     </script>
     <style>
         body {
-            background-color: #DEF6FB;
+            background-color: #DEF6FB; /* Light blue background */
             margin: 0; /* Remove default margin */
+            font-family: Arial, sans-serif; /* Font style */
         }
-        .profile-container {
-            text-align: center;
-            padding: 50px 20px;
+        .hero-section { 
+            background-image: url('./images/forest1.png'); /* Hero image */
+            background-size: cover;
+            background-color: cyan;
+            background-position: center;
+            height: 300px; /* Adjust height as needed */
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            position: relative; /* Ensure positioning for the profile image */
         }
         .profile-image {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             border: 5px solid #784FB1; /* Border color */
-            margin-bottom: 20px;
+            position: absolute; /* Position the image absolutely */
+            bottom: -75px; /* Overlap the hero section */
+            left: 50%; /* Center the image */
+            transform: translateX(-50%); /* Adjust for centering */
+        }
+        .profile-container {
+            text-align: center;
+            padding: 50px 20px;
+            margin-top: 100px; /* Adjust to pull content down */
         }
         .active-cases {
             margin-top: 30px;
@@ -43,6 +59,9 @@
             max-width: 800px;
             margin: 0 auto; /* Center the table */
             border-collapse: collapse;
+            background-color: #ffffff; /* White background for the table */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow effect */
         }
         .active-cases th, .active-cases td {
             border: 1px solid #ccc;
@@ -54,9 +73,14 @@
         }
         .status-pending {
             color: red;
+            font-weight: bold;
         }
         .status-resolved {
             color: green;
+            font-weight: bold;
+        }
+        h1, h2 {
+            color: #6A5ACD; /* Purple color */
         }
     </style>
 </head>
@@ -79,9 +103,13 @@
         </div>
     </nav>
 
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <img src="./images/avatar.png" alt="User Avatar" class="profile-image">
+    </div>
+
     <!-- User Profile Section -->
     <div class="profile-container">
-        <img src="./images/avatar.png" alt="User Avatar" class="profile-image">
         <h1>Alex Mumanyi</h1>
         <h2>My Active Cases</h2>
 
